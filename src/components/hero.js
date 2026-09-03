@@ -69,10 +69,7 @@ export function createHero() {
             </div>
 
 
-            <div
-              class="absolute bottom-14 left-8 flex items-center gap-4 md:left-12 lg:left-16"
-            >
-
+           <div class="absolute bottom-4 left-8 flex items-center gap-4 md:left-12 lg:left-16">
               <div
                 class="relative h-20 w-px bg-black/15 dark:bg-white/20"
               >

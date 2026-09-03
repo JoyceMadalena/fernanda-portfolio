@@ -125,3 +125,33 @@ canvas {
     transform: translate3d(80px, 0, 0) rotate(-9deg);
   }
 }
+
+.say-hi-bubble {
+  animation: sayHiFloat 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes sayHiFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(4px, -7px, 0) rotate(1deg);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+
+  75% {
+    transform: translate3d(-4px, -6px, 0) rotate(-1deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .say-hi-bubble {
+    animation: none;
+  }
+}
