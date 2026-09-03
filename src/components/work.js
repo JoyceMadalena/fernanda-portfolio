@@ -120,7 +120,6 @@ export function createWork() {
           <p
             class="mt-8 max-w-[520px] text-[15px] leading-7 text-[#68656e] dark:text-[#aaa7b0] md:text-[16px]"
           >
-            Uma seleção de projetos que exploram estratégia, identidade e experiências digitais.
           </p>
 
         </div>
