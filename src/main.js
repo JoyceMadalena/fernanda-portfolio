@@ -68,3 +68,31 @@ if (projectMatch) {
     createTalkScene(talk3D);
   }
 }
+
+const cursorSphere = document.createElement("div");
+
+cursorSphere.className = "cursor-sphere";
+
+document.body.appendChild(cursorSphere);
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let sphereX = mouseX;
+let sphereY = mouseY;
+
+window.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+});
+
+function animateCursorSphere() {
+  sphereX += (mouseX - sphereX) * 0.18;
+  sphereY += (mouseY - sphereY) * 0.18;
+
+  cursorSphere.style.transform = `translate3d(${sphereX}px, ${sphereY}px, 0) translate(-50%, -50%)`;
+
+  requestAnimationFrame(animateCursorSphere);
+}
+
+animateCursorSphere();
