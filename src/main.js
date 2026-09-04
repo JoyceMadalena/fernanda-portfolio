@@ -28,10 +28,10 @@ if (projectMatch) {
   app.innerHTML = `
     ${createHero()}
 
-    <div
-      id="work-talk"
-      class="relative overflow-hidden bg-[#f8f7fa] dark:bg-[#101014]"
-    >
+      <div
+        id="work-talk"
+        class="relative z-20 overflow-hidden bg-[#f8f7fa] dark:bg-[#101014]"
+      >
 
       <div
         class="pointer-events-none absolute -right-[15%] top-[8%] z-0 h-[600px] w-[600px] rounded-full bg-[#ff3fa4]/[0.06] blur-[150px]"

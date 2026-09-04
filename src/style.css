@@ -47,6 +47,12 @@ canvas {
   letter-spacing: normal;
 }
 
+.hero-stage-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Cursor */
 
 .cursor-sphere {
@@ -61,9 +67,9 @@ canvas {
   background: radial-gradient(
     circle at 32% 28%,
     #ffffff 0%,
-    #d9c8ff 18%,
-    #7e54da 55%,
-    #6842c7 100%
+    #c8b5ff 18%,
+    #5b30be 55%,
+    #5b21b6 100%
   );
   box-shadow:
     0 0 12px rgba(155, 108, 255, 0.4),
