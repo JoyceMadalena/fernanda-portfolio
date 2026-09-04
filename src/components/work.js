@@ -120,10 +120,10 @@ export function createWork() {
           <p
             class="mt-8 max-w-[520px] text-[15px] leading-7 text-[#68656e] dark:text-[#aaa7b0] md:text-[16px]"
           >
+            Uma seleção de projetos que exploram estratégia, identidade e experiências digitais.
           </p>
 
         </div>
-
 
         <div class="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
 
@@ -146,6 +146,8 @@ export function createWork() {
                           <img
                             src="${image}"
                             alt="${project.title}"
+                            loading="lazy"
+                            decoding="async"
                             class="project-image absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
                               imageIndex === 0 ? "opacity-100" : "opacity-0"
                             }"
@@ -156,7 +158,6 @@ export function createWork() {
                       .join("")}
 
                   </div>
-
 
                   <div class="mt-4 flex items-start justify-between gap-4">
 
@@ -175,7 +176,6 @@ export function createWork() {
                       </h3>
 
                     </div>
-
 
                     <span
                       class="shrink-0 pt-1 text-[8px] font-semibold tracking-[0.15em] text-[#99969e] dark:text-[#77747d]"
@@ -210,14 +210,11 @@ export function initWork() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("work-card--visible");
-
           observer.unobserve(entry.target);
         }
       });
     },
-    {
-      threshold: 0.12,
-    },
+    { threshold: 0.12 },
   );
 
   cards.forEach((card) => {
